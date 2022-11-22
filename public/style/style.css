@@ -89,6 +89,7 @@ header {
     position: fixed;
     background-color: #0809086e;
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     width: 100%;
 }
 
