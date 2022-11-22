@@ -220,7 +220,7 @@ main {
     border-bottom-left-radius: 25px;
     border-left: 1px solid #F2F6F0;
     border-bottom: 1px solid #F2F6F0;
-    transform: translate(-1px, 1px);
+    transform: translate(-0.5px, 0.5px);
 }
 
 .road .corner-left-bottom {
