@@ -232,7 +232,7 @@ main {
     border-top-left-radius: 25px;
     border-left: 1px solid #F2F6F0;
     border-top: 1px solid #F2F6F0;
-    transform: translate(0.5px, 0.5px);
+    transform: translate(0.5px, -0.5px);
 }
 
 .road .corner-right-bottom {
@@ -244,7 +244,7 @@ main {
     border-top-right-radius: 25px;
     border-right: 1px solid #F2F6F0;
     border-top: 1px solid #F2F6F0;
-    transform: translate(-0.5px, -0.5px);
+    transform: translate(0.5px, -0.5px);
 }
 
 .road .corner-right-top {
