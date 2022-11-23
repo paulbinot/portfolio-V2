@@ -16,6 +16,7 @@ h1 {
 h2 {
     font-family: 'format', Helvetica, sans-serif;
     font-size: 11rem;
+    padding-bottom: 3rem;
 }
 
 h3 {
@@ -86,7 +87,10 @@ section {
 
 @media screen and (max-width: 768px) {
     h2 {
-        font-size: 2rem;
+        font-size: 3.5rem;
+    }
+    h3 {
+        font-size: 1.5rem;
     }
     .section-content {
         padding: 0;
@@ -330,6 +334,14 @@ main {
     transform: translate(0.5px, 0.5px);
 }
 
+@media screen and (max-width: 768px) {
+    .schooling-content .left .content {
+        padding-left: 1.5rem;
+    }
+    .schooling-content .right .content {
+        padding-right: 1.5rem;
+    }
+}
 
 
 
