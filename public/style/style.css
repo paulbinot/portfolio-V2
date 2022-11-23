@@ -15,7 +15,7 @@ h1 {
 
 h2 {
     font-family: 'format', Helvetica, sans-serif;
-    font-size: 12rem;
+    font-size: 11rem;
 }
 
 h3 {
@@ -77,6 +77,25 @@ section {
 .section-content {
     padding: 0 4rem;
 }
+
+@media screen and (max-width: 1024px) {
+    h2 {
+        font-size: 8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+    .section-content {
+        padding: 0;
+    }
+    .page-container {
+        padding: 2rem;
+    }
+}
+
 /* SCROLLBAR */
 
 body::-webkit-scrollbar {
@@ -118,11 +137,13 @@ main {
 
 .about-me-content {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .about-me-content .infos, .photo {
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -141,6 +162,25 @@ main {
     position: relative;
     top: -5px;
     left: -7px;
+}
+
+@media screen and (max-width: 1024px) {
+    .about-me-content .infos {
+        width: 50%;
+    }
+    .about-me-content .photo {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-me-content {
+        flex-direction: column;
+        gap: 5rem;
+    }
+    .about-me-content .infos, .about-me-content .photo {
+        width: 100%;
+    }
 }
 
 /* Schooling Section */
@@ -183,6 +223,10 @@ main {
     justify-content: flex-end;
 }
 
+.schooling-content .deco {
+    z-index: -1;
+}
+
 .schooling-content .deco .point {
     height: 25px;
     width: 25px;
@@ -218,12 +262,14 @@ main {
 .road .left, .road .right {
     width: 10%;
     position: relative;
+    z-index: -1;
 }
 
 .road .line-container {
     width: 80%;
     height: 120px;
     position: relative;
+    z-index: -1;
 }
 
 .road .line-container .line {
@@ -421,6 +467,14 @@ main {
     width: 10px;
     border-radius: 99px;
 }
+
+@media screen and (max-width: 768px) {
+    .descktop-deco {
+        display: none;
+    }
+}
+
+
 
 
 /* FONTS IMPORT */
