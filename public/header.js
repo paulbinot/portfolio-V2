@@ -24,3 +24,24 @@ menuLinks.addEventListener('click', (event) => {
     menuOpen = false;
   }
 });
+
+const themeSwitcher = document.querySelector('.theme-switch');
+let lightTheme = false;
+
+themeSwitcher.addEventListener('click', () => {
+  themeSwitcher.classList.toggle("light");
+
+  if (lightTheme === false) {
+    document.documentElement.style.setProperty('--font-color', '#080908');
+    document.documentElement.style.setProperty('--background-color', '#F2F6F0');
+    document.documentElement.style.setProperty('--variation-color', '#34c80f');
+    lightTheme = true;
+  } else if (lightTheme === true) {
+    document.documentElement.style.setProperty('--font-color', '#F2F6F0');
+    document.documentElement.style.setProperty('--background-color', '#080908');
+    document.documentElement.style.setProperty('--variation-color', '#44F917');
+    lightTheme = false;
+  }
+
+  console.log(lightTheme);
+});

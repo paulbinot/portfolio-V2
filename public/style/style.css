@@ -1,11 +1,17 @@
+:root {
+    --font-color: #F2F6F0;
+    --background-color: #080908;
+    --variation-color: #44F917;
+}
+
 body {
-    background-color: #080908;
-    color: #F2F6F0;
+    background-color: var(--background-color);
+    color: var(--font-color);
     font-family: 'RobotoMono', Helvetica, sans-serif;
 }
 
 .variation-color {
-    color: #44F917;
+    color: var(--variation-color);
 }
 
 h1 {
@@ -43,7 +49,7 @@ b {
 
 .link {
     text-decoration: none;
-    color: #F2F6F0;
+    color: var(--font-color);
     transition: all 0.2s ease-in-out;
 }
 
@@ -105,7 +111,7 @@ section {
 /* SCROLLBAR */
 
 body::-webkit-scrollbar {
-    background-color: #080908;
+    background-color: var(--background-color);
     width: 6px;
 }
 
@@ -121,11 +127,12 @@ header {
     padding: 3rem 4rem 1rem 5rem;
     align-items: baseline;
     position: fixed;
-    background-color: #080908c9;
+    background-color: var(--background-color);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
+    opacity: 0.95;
     width: 100%;
-    border-bottom: 0.2px solid #080908;
+    border-bottom: 0.2px solid var(--background-color);
 }
 
 .descktop-nav ul {
@@ -329,14 +336,14 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 3px solid #080908;
+    border: 3px solid var(--background-color);
 }
 
 .schooling-content .deco .line {
     height: 104%;
     width: 1px;
     position: absolute;
-    background-color: #F2F6F0;
+    background-color: var(--font-color);
     bottom: -2%;
     left: 50%;
     transform: translateX(-50%);
@@ -368,7 +375,7 @@ main {
 .road .line-container .line {
     width: 104%;
     height: 1px;
-    background-color: #F2F6F0;
+    background-color: var(--font-color);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -382,8 +389,8 @@ main {
     right: 0px;
     top: 0px;
     border-bottom-left-radius: 25px;
-    border-left: 1px solid #F2F6F0;
-    border-bottom: 1px solid #F2F6F0;
+    border-left: 1px solid var(--font-color);
+    border-bottom: 1px solid var(--font-color);
     transform: translate(-0.5px, 0.5px);
 }
 
@@ -394,8 +401,8 @@ main {
     right: 0px;
     bottom: 0px;
     border-top-left-radius: 25px;
-    border-left: 1px solid #F2F6F0;
-    border-top: 1px solid #F2F6F0;
+    border-left: 1px solid var(--font-color);
+    border-top: 1px solid var(--font-color);
     transform: translate(-0.5px, -0.5px);
 }
 
@@ -406,8 +413,8 @@ main {
     bottom: 0px;
     left: 0px;
     border-top-right-radius: 25px;
-    border-right: 1px solid #F2F6F0;
-    border-top: 1px solid #F2F6F0;
+    border-right: 1px solid var(--font-color);
+    border-top: 1px solid var(--font-color);
     transform: translate(0.5px, -0.5px);
 }
 
@@ -418,8 +425,8 @@ main {
     top: 0px;
     left: 0px;
     border-bottom-right-radius: 25px;
-    border-right: 1px solid #F2F6F0;
-    border-bottom: 1px solid #F2F6F0;
+    border-right: 1px solid var(--font-color);
+    border-bottom: 1px solid var(--font-color);
     transform: translate(0.5px, 0.5px);
 }
 
@@ -438,7 +445,7 @@ main {
 
 /* DESKTOP DECORATION */
 .white {
-    background-color: #F2F6F0;
+    background-color: var(--font-color);
 }
 /* top */
 .top-left-v {
@@ -521,14 +528,14 @@ main {
 .px-count .title {
     font-weight: 200;
     font-size: 0.65rem;
-    background-color: #080908;
+    background-color: var(--background-color);
     padding: 0.5rem;
 }
 
 .px-count .line {
     width: 1px;
     height: 235px;
-    background-color: #F2F6F0;
+    background-color: var(--font-color);
 }
 
 .params {
@@ -537,7 +544,7 @@ main {
     position: fixed;
     top: 15px;
     right: 100px;
-    color: #F2F6F0;
+    color: var(--font-color);
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -549,7 +556,7 @@ main {
 }
 
 .params .theme-switch {
-    background-color: #f2f6f095;
+    background-color: var(--font-color);
     height: 14px;
     border-radius: 99px;
     width: 25px;
@@ -557,10 +564,15 @@ main {
     justify-content: flex-end;
     padding: 2px;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.params .light {
+    justify-content: flex-start;
 }
 
 .params .theme-switch .switcher {
-    background-color: #080908;
+    background-color: var(--background-color);
     height: 10px;
     width: 10px;
     border-radius: 99px;
