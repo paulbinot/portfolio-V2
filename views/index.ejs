@@ -12,18 +12,23 @@
         <h1><span class="variation-color">@</span>paul_binot</h1>
         <nav class="descktop-nav">
             <ul>
-                <a href="/" class="link uppercase"><li>About me</li></a>
-                <a href="/" class="link uppercase"><li>Schooling</li></a>
-                <a href="#" class="link uppercase"><li>Skills</li></a>
-                <a href="#" class="link uppercase"><li>XP</li></a>
-                <a href="#" class="link uppercase"><li>Projects</li></a>
-                <a href="#" class="link uppercase"><li>Contact</li></a>
+                <a href="#about-me" class="link uppercase"><li>About me</li></a>
+                <a href="#schooling" class="link uppercase"><li>Schooling</li></a>
+                <a href="#skills" class="link uppercase"><li>Skills</li></a>
+                <a href="#projects" class="link uppercase"><li>Projects</li></a>
+                <a href="#contact" class="link uppercase"><li>Contact</li></a>
             </ul>
         </nav>
+        <div class="menu-button-container">
+            <div class="menu-button">
+                <div class="button-part"></div>
+            </div>
+        </div>
     </header>
     <div class="page-container">
         <main>
-            <section id="about-me">
+            <section>
+                <div id="about-me" class="marker"></div>
                 <h2>about Me <span class="variation-color">.</span></h2>
                 <div class="about-me-content section-content">
                     <div class="infos">
@@ -39,7 +44,8 @@
                 </div>
 
             </section>
-            <section id="schooling">
+            <section>
+                <div id="schooling" class="marker"></div>
                 <h2>Schooling <span class="variation-color">.</span></h2>
                 <div class="schooling-content section-content">
                     <article class="left">
@@ -114,12 +120,19 @@
                 </div>
 
             </section>
-            <section id="skills">
+            <section>
+                <div id="skills" class="marker"></div>
                 <h2>Skills <span class="variation-color">.</span></h2>
 
             </section>
-            <section id="experiences">
-                <h2>Experiences <span class="variation-color">.</span></h2>
+            <section>
+                <div id="projects" class="marker"></div>
+                <h2>Projects <span class="variation-color">.</span></h2>
+
+            </section>
+            <section>
+                <div id="contact" class="marker"></div>
+                <h2>Contact <span class="variation-color">.</span></h2>
 
             </section>
         </main>
@@ -185,5 +198,7 @@
         </div>
         <div class="color-choice variation-color">#<span class="color">44F917</span></div>
     </div>
+
+    <script src="header.js"></script>
 </body>
 </html>

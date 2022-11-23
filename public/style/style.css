@@ -1,7 +1,6 @@
 body {
     background-color: #080908;
     color: #F2F6F0;
-    /* min-height: 100%; */
     font-family: 'RobotoMono', Helvetica, sans-serif;
 }
 
@@ -11,6 +10,7 @@ body {
 
 h1 {
     font-family: 'format', Helvetica, sans-serif;
+    font-size: 1.7rem;
 }
 
 h2 {
@@ -73,6 +73,8 @@ section {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    position: relative;
+    z-index: -1;
 }
 
 .section-content {
@@ -115,11 +117,11 @@ body::-webkit-scrollbar-thumb {
 
 header {
     display: flex;
-    gap: 4.5rem;
+    gap: 3.5rem;
     padding: 3rem 4rem 1rem 5rem;
     align-items: baseline;
     position: fixed;
-    background-color: #0809086e;
+    background-color: #080908c9;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     width: 100%;
@@ -128,9 +130,91 @@ header {
 
 .descktop-nav ul {
     display: flex;
-    gap: 1rem 6rem;
+    gap: 1rem 3.5rem;
     flex-wrap: wrap;
 }
+
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .descktop-nav {
+        display: none;
+        position: relative;
+        left: -100%;
+    }
+    .descktop-nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-left: 1rem;
+    }
+
+    .active {
+        display: block;
+        left: 0;
+    }
+
+    .menu-button-container {
+        position: absolute;
+        top: 20px;
+        right: 2rem;
+        width: auto;
+        height: 5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+
+    .menu-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .button-part {
+        width: 25px;
+        height: 5px;
+        background: #44F917;
+        border-radius: 1.5px;
+        transition: all 0.15s ease-in-out;
+    }
+
+    .button-part::before, .button-part::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 5px;
+        background: #44F917;
+        border-radius: 1.5px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .button-part::before {
+        transform: translateY(-10px);
+    }
+    .button-part::after {
+        transform: translateY(10px);
+    }
+
+    .menu-button.open .button-part {
+        background-color: transparent;
+    }
+    
+    .menu-button.open .button-part::before {
+        transform: rotate(45deg);
+    }
+    .menu-button.open .button-part::after {
+        transform: rotate(-45deg);
+    }
+}
+
+
 
 /* MAIN */
 main {
@@ -138,6 +222,11 @@ main {
 }
 
 /* about me section */
+
+.marker {
+    position: absolute;
+    top: -6rem;
+}
 
 .about-me-content {
     display: flex;
@@ -341,14 +430,11 @@ main {
     .schooling-content .right .content {
         padding-right: 1.5rem;
     }
+    .road .line-container .line {
+        width: 102%;
+        left: -1%;
+    }
 }
-
-
-
-
-
-
-
 
 /* DESKTOP DECORATION */
 .white {
@@ -485,9 +571,6 @@ main {
         display: none;
     }
 }
-
-
-
 
 /* FONTS IMPORT */
 @font-face {
