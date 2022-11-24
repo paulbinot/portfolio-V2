@@ -567,6 +567,16 @@ main {
     transition: all 0.2s ease-in-out;
 }
 
+.params .theme-switch-container {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.params ion-icon {
+    font-size: 0.72rem;
+}
+
 .params .light {
     justify-content: flex-start;
 }
@@ -581,6 +591,10 @@ main {
 @media screen and (max-width: 768px) {
     .descktop-deco {
         display: none;
+    }
+
+    .params {
+        right: 2rem;
     }
 }
 
