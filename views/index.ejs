@@ -123,11 +123,49 @@
             <section>
                 <div id="skills" class="marker"></div>
                 <h2>Skills <span class="variation-color">.</span></h2>
+                <div class="section-content">
+                    <h3><span class="variation-color">></span> Web development technos</h3>
+                    <div class="skills-container">
+
+                        <% for( const skill of techSkills ) { %>
+
+                            <div class="skill-container">
+                                <div class="skill">
+                                    <img src="/images/<%= skill.image_url %> " alt="<%= skill.name %> Logo">
+                                    <h4 class="skill-name"><%= skill.name %> </h4>
+                                    <div class="shadow top-left-shadow"></div>
+                                    <div class="shadow bottom-right-shadow"></div>
+                                </div>
+                            </div>
+
+                        <% } %>
+
+                    </div>
+
+                    <h3><span class="variation-color">></span> Other</h3>
+                    <div class="skills-container">
+
+                        <% for( const skill of otherSkills ) { %>
+
+                            <div class="skill-container">
+                                <div class="skill">
+                                    <img src="/images/<%= skill.image_url %> " alt="<%= skill.name %> Logo">
+                                    <h4 class="skill-name"><%= skill.name %> </h4>
+                                    <div class="shadow top-left-shadow"></div>
+                                    <div class="shadow bottom-right-shadow"></div>
+                                </div>
+                            </div>
+
+                        <% } %>
+
+                    </div>
+                </div>
 
             </section>
             <section>
                 <div id="projects" class="marker"></div>
                 <h2>Projects <span class="variation-color">.</span></h2>
+
 
             </section>
             <section>
