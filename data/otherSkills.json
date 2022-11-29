@@ -2,5 +2,17 @@
     {
         "name": "Figma",
         "image_url":"Figma-logo.svg"
+    },
+    {
+        "name": "Illustrator",
+        "image_url":"Adobe_Illustrator_CC_icon.svg"
+    },
+    {
+        "name": "Photoshop",
+        "image_url":"Adobe_Photoshop_CC_icon.svg"
+    },
+    {
+        "name": "InDesign",
+        "image_url":"Adobe_InDesign_CC_icon.svg"
     }
 ]
