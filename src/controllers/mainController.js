@@ -21,6 +21,9 @@ const mainController = {
             association: "technos",
             include: "image"
           }
+        ],
+        order: [
+          ["created_at", "DESC"]
         ]
       });
       console.log(projects);

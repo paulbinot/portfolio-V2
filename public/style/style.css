@@ -125,14 +125,14 @@ button ion-icon {
 }
 
 .btn2 {
-    color: var(--variation-color);
+    color: var(--font-color);
     background-color: var(--background-color);
-    border-color: var(--variation-color);
+    border-color: var(--font-color);
 }
 
 .btn2:hover {
-    color: var(--background-color);
-    background-color: var(--variation-color);
+    color: var(--variation-color);
+    border-color: var(--variation-color);
 }
 
 @media screen and (max-width: 1024px) {
@@ -600,6 +600,15 @@ main {
 .projects-buttons {
     display: flex;
     gap: 0.5rem;
+    width: 100%;
+}
+
+.projects-buttons .btn1 {
+    width: 100%;
+}
+
+.projects-buttons .highlight-link {
+    flex-grow: 1;
 }
 
 .project-tags {
@@ -630,6 +639,9 @@ main {
         flex: 1 0 100%;
         width: 100%;
         max-width: 100%;
+    }
+    .project img {
+        height: 200px;
     }
 }
 
