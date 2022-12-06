@@ -4,13 +4,13 @@ const express = require('express');
 const PORT = process.env.PORT ?? 3000;
 
 // Routers import
-const mainRouter = require('./routers/mainRouter');
+const mainRouter = require('./src/routers/mainRouter');
 
 
 // Create server
 const app = express();
 app.set("view engine", "ejs");
-app.set("views", "./views");
+app.set("views", "./src/views");
 
 // -----MIDDLEWARES-----
 app.use(express.static("public"));
