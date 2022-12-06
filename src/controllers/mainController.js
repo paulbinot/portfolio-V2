@@ -1,5 +1,5 @@
 // Require data here if needed
-const { Skill } = require('../models');
+const { Skill, Project } = require('../models');
 
 const mainController = {
   renderHomePage: async (req, res) => {
@@ -12,8 +12,19 @@ const mainController = {
         where: { type: "web_dev"},
         include: "image"
       });
-      console.log(otherSkills);
-      res.render("index", { techSkills, otherSkills });
+      const projects = await Project.findAll({
+        include: [
+          {
+            association: "images"
+          },
+          {
+            association: "technos",
+            include: "image"
+          }
+        ]
+      });
+      console.log(projects);
+      res.render("index", { techSkills, otherSkills, projects });
     } catch (error) {
       console.error(error.message);
       res.status(500).send("ERREUR 500");

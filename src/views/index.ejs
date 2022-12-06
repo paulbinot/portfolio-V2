@@ -1,250 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paul Binot</title>
-    <link rel="stylesheet" href="/style/reset.css">
-    <link rel="stylesheet" href="/style/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paul Binot</title>
+  <link rel="stylesheet" href="/style/reset.css">
+  <link rel="stylesheet" href="/style/style.css">
+
 <body>
-    <div class="header-container">
-        <header>
-            <h1><span class="variation-color">@</span>paul_binot</h1>
-            <nav class="descktop-nav">
-                <ul>
-                    <a href="#about-me" class="link uppercase"><li>About me</li></a>
-                    <a href="#schooling" class="link uppercase"><li>Schooling</li></a>
-                    <a href="#skills" class="link uppercase"><li>Skills</li></a>
-                    <a href="#projects" class="link uppercase"><li>Projects</li></a>
-                    <a href="#contact" class="link uppercase"><li>Contact</li></a>
-                </ul>
-            </nav>
-            <div class="menu-button-container">
-                <div class="menu-button">
-                    <div class="button-part"></div>
-                </div>
-            </div>
-        </header>
-    </div>
-    <div class="page-container">
-        <main>
-            <section>
-                <div id="about-me" class="marker"></div>
-                <h2>about Me <span class="variation-color">.</span></h2>
-                <div class="about-me-content section-content">
-                    <div class="infos">
-                        <p><span class="variation-color">Hello !</span> My name is Paul BINOT and I'm a french programer of 21 yo ! <i>(student for the moment to be honest;))</i></p>
-                        <p>Today, I work on the <b>Node JS</b> environment as a fullstack developer.</p>
-                        <p>I like create with my computer so I like code, web design, photo and video edition, ... I also like automotive, aquariums, DIY, ...</p>
-                    </div>
-                    <div class="photo">
-                        <div class="photo-container">
-                            <img src="/images/pp.jpg" alt="Profile picture Paul BINOT">
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-            <section>
-                <div id="schooling" class="marker"></div>
-                <h2>Schooling <span class="variation-color">.</span></h2>
-                <div class="schooling-content section-content">
-                    <article class="left">
-                        <div class="deco">
-                            <div class="line first"></div>
-                            <div class="point"></div>
-                        </div>
-                        <div class="content">
-                            <h3><span class="variation-color">></span> fullstackJS developer formation</h3>
-                            <div class="details">
-                                <h4 class="variation-color">O'clock.io</h4>
-                                <span>/</span>
-                                <h5>09/2022 - today</h5>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quas suscipit neque veritatis pariatur perspiciatis dolorem eligendi sapiente tenetur eaque.</p>
-                        </div>
-                    </article>
-                    <div class="road">
-                        <div class="left">
-                            <div class="corner-left-top"></div>
-                        </div>
-                        <div class="line-container">
-                            <div class="line"></div>
-                        </div>
-                        <div class="right">
-                            <div class="corner-right-bottom"></div>
-                        </div>
-                    </div>
-
-                    <article class="right">
-                        <div class="content">
-                            <h3><span class="variation-color">></span> Design Licence</h3>
-                            <div class="details">
-                                <h4 class="variation-color">UT2J Toulouse</h4>
-                                <span>/</span>
-                                <h5>09/2019 - 06/2022</h5>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quas suscipit neque veritatis pariatur perspiciatis dolorem eligendi sapiente tenetur eaque.</p>
-                        </div>
-                        <div class="deco">
-                            <div class="line"></div>
-                            <div class="point"></div>
-                        </div>
-                    </article>
-                    <div class="road">
-                        <div class="left">
-                            <div class="corner-left-bottom"></div>
-                        </div>
-                        <div class="line-container">
-                            <div class="line"></div>
-                        </div>
-                        <div class="right">
-                            <div class="corner-right-top"></div>
-                        </div>
-                    </div>
-
-                    <article class="left">
-                        <div class="deco">
-                            <div class="line last"></div>
-                            <div class="point"></div>
-                        </div>
-                        <div class="content">
-                            <h3><span class="variation-color">></span> Scientific secondary school diploma</h3>
-                            <div class="details">
-                                <h4 class="variation-color">Lycée Déodat de Severac Toulouse</h4>
-                                <span>/</span>
-                                <h5>09/2015 - 06/2029</h5>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quas suscipit neque veritatis pariatur perspiciatis dolorem eligendi sapiente tenetur eaque.</p>
-                        </div>
-                    </article>
-                </div>
-
-            </section>
-            <section>
-                <div id="skills" class="marker"></div>
-                <h2>Skills <span class="variation-color">.</span></h2>
-                <div class="section-content">
-                    <h3><span class="variation-color">></span> Web development technos</h3>
-                    <div class="skills-container">
-
-                        <% for( const skill of techSkills ) { %>
-
-                            <div class="skill-container">
-                                <div class="skill">
-                                    <img src="/images/<%= skill.image.url %> " alt="<%= skill.name %> Logo">
-                                    <h4 class="skill-name"><%= skill.name %> </h4>
-                                    <div class="shadow top-left-shadow"></div>
-                                    <div class="shadow bottom-right-shadow"></div>
-                                </div>
-                            </div>
-
-                        <% } %>
-
-                    </div>
-
-                    <h3><span class="variation-color">></span> Other</h3>
-                    <div class="skills-container">
-
-                        <% for( const skill of otherSkills ) { %>
-
-                            <div class="skill-container">
-                                <div class="skill">
-                                    <img src="/images/<%= skill.image.url %> " alt="<%= skill.name %> Logo">
-                                    <h4 class="skill-name"><%= skill.name %> </h4>
-                                    <div class="shadow top-left-shadow"></div>
-                                    <div class="shadow bottom-right-shadow"></div>
-                                </div>
-                            </div>
-
-                        <% } %>
-
-                    </div>
-                </div>
-
-            </section>
-            <section>
-                <div id="projects" class="marker"></div>
-                <h2>Projects <span class="variation-color">.</span></h2>
-
-
-            </section>
-            <section>
-                <div id="contact" class="marker"></div>
-                <h2>Contact <span class="variation-color">.</span></h2>
-
-            </section>
-        </main>
-    </div>
-    
-    <footer>
-
-    </footer>
-    <!-- Décoration -->
-    <div class="top-left-h white descktop-deco"></div>
-    <div class="top-left-v white descktop-deco"></div>
-    <div class="top-right-h white descktop-deco"></div>
-    <div class="top-right-v white descktop-deco"></div>
-    <div class="bottom-left-h white descktop-deco"></div>
-    <div class="bottom-left-v white descktop-deco"></div>
-    <div class="bottom-right-h white descktop-deco"></div>
-    <div class="bottom-right-v white descktop-deco"></div>
-    <div class="right-px-count px-count descktop-deco">
-        <div class="title">0px</div>
-        <div class="line"></div>
-        <div class="title">250px</div>
-        <div class="line"></div>
-        <div class="title">500px</div>
-        <div class="line"></div>
-        <div class="title">750px</div>
-        <div class="line"></div>
-        <div class="title">1000px</div>
-        <div class="line"></div>
-        <div class="title">1250px</div>
-        <div class="line"></div>
-        <div class="title">1500px</div>
-        <div class="line"></div>
-        <div class="title">1750px</div>
-        <div class="line"></div>
-        <div class="title">2000px</div>
-        <div class="line"></div>
-        <div class="title">2250px</div>
-    </div>
-    <div class="left-px-count px-count descktop-deco">
-        <div class="title">0px</div>
-        <div class="line"></div>
-        <div class="title">250px</div>
-        <div class="line"></div>
-        <div class="title">500px</div>
-        <div class="line"></div>
-        <div class="title">750px</div>
-        <div class="line"></div>
-        <div class="title">1000px</div>
-        <div class="line"></div>
-        <div class="title">1250px</div>
-        <div class="line"></div>
-        <div class="title">1500px</div>
-        <div class="line"></div>
-        <div class="title">1750px</div>
-        <div class="line"></div>
-        <div class="title">2000px</div>
-        <div class="line"></div>
-        <div class="title">2250px</div>
-    </div>
-    <div class="params">
-        <div class="params-container">
-            <ion-icon name="sunny"></ion-icon>
-            <div class="theme-switch">
-                <div class="switcher"></div>
-            </div>
-            <ion-icon name="moon"></ion-icon>
+  <div class="header-container">
+    <header>
+      <h1><span class="variation-color">@</span>paul_binot</h1>
+      <nav class="descktop-nav">
+        <ul>
+          <a href="/#about-me" class="link uppercase">
+            <li>About me</li>
+          </a>
+          <a href="/#schooling" class="link uppercase">
+            <li>Schooling</li>
+          </a>
+          <a href="/#skills" class="link uppercase">
+            <li>Skills</li>
+          </a>
+          <a href="/#projects" class="link uppercase">
+            <li>Projects</li>
+          </a>
+          <a href="/#contact" class="link uppercase">
+            <li>Contact</li>
+          </a>
+        </ul>
+      </nav>
+      <div class="menu-button-container">
+        <div class="menu-button">
+          <div class="button-part"></div>
         </div>
-        <div class="color-choice variation-color params-container">#<span class="color" id="color">35d50d</span><ion-icon name="shuffle" id="random-color"></ion-icon></div> 
-    </div>
+      </div>
+    </header>
+  </div>
+  <div class="page-container">
+    <main>
+      <section>
+        <div id="about-me" class="marker"></div>
+        <h2>about Me <span class="variation-color">.</span></h2>
+        <div class="about-me-content section-content">
+          <div class="infos">
+            <p><span class="variation-color">Hello !</span> My name is Paul BINOT and I'm a french programer of 21 yo !
+              <i>(student for the moment to be honest;))</i></p>
+            <p>Today, I work on the <b>Node JS</b> environment as a fullstack developer.</p>
+            <p>I like create with my computer so I like code, web design, photo and video edition, ... I also like
+              automotive, aquariums, DIY, ...</p>
+          </div>
+          <div class="photo">
+            <div class="photo-container">
+              <img src="/images/pp.jpg" alt="Profile picture Paul BINOT">
+            </div>
+          </div>
+        </div>
 
-    <script src="header.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      </section>
+      <section>
+        <div id="schooling" class="marker"></div>
+        <h2>Schooling <span class="variation-color">.</span></h2>
+        <div class="schooling-content section-content">
+          <article class="left">
+            <div class="deco">
+              <div class="line first"></div>
+              <div class="point"></div>
+            </div>
+            <div class="content">
+              <h3><span class="variation-color">></span> fullstackJS developer formation</h3>
+              <div class="details">
+                <h4 class="variation-color">O'clock.io</h4>
+                <span>/</span>
+                <h5>09/2022 - today</h5>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quas suscipit neque veritatis pariatur
+                perspiciatis dolorem eligendi sapiente tenetur eaque.</p>
+            </div>
+          </article>
+          <div class="road">
+            <div class="left">
+              <div class="corner-left-top"></div>
+            </div>
+            <div class="line-container">
+              <div class="line"></div>
+            </div>
+            <div class="right">
+              <div class="corner-right-bottom"></div>
+            </div>
+          </div>
+
+          <article class="right">
+            <div class="content">
+              <h3><span class="variation-color">></span> Design Licence</h3>
+              <div class="details">
+                <h4 class="variation-color">UT2J Toulouse</h4>
+                <span>/</span>
+                <h5>09/2019 - 06/2022</h5>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quas suscipit neque veritatis pariatur
+                perspiciatis dolorem eligendi sapiente tenetur eaque.</p>
+            </div>
+            <div class="deco">
+              <div class="line"></div>
+              <div class="point"></div>
+            </div>
+          </article>
+          <div class="road">
+            <div class="left">
+              <div class="corner-left-bottom"></div>
+            </div>
+            <div class="line-container">
+              <div class="line"></div>
+            </div>
+            <div class="right">
+              <div class="corner-right-top"></div>
+            </div>
+          </div>
+
+          <article class="left">
+            <div class="deco">
+              <div class="line last"></div>
+              <div class="point"></div>
+            </div>
+            <div class="content">
+              <h3><span class="variation-color">></span> Scientific secondary school diploma</h3>
+              <div class="details">
+                <h4 class="variation-color">Lycée Déodat de Severac Toulouse</h4>
+                <span>/</span>
+                <h5>09/2015 - 06/2029</h5>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quas suscipit neque veritatis pariatur
+                perspiciatis dolorem eligendi sapiente tenetur eaque.</p>
+            </div>
+          </article>
+        </div>
+
+      </section>
+      <section>
+        <div id="skills" class="marker"></div>
+        <h2>Skills <span class="variation-color">.</span></h2>
+        <div class="section-content">
+          <h3><span class="variation-color">></span> Web development technos</h3>
+          <div class="skills-container">
+
+            <% for( const skill of techSkills ) { %>
+
+              <div class="skill-container">
+                <div class="skill">
+                  <img src="/images/<%= skill.image.url %> " alt="<%= skill.name %> Logo">
+                  <h4 class="skill-name">
+                    <%= skill.name %>
+                  </h4>
+                  <div class="shadow top-left-shadow"></div>
+                  <div class="shadow bottom-right-shadow"></div>
+                </div>
+              </div>
+
+              <% } %>
+
+          </div>
+
+          <h3><span class="variation-color">></span> Other</h3>
+          <div class="skills-container">
+
+            <% for( const skill of otherSkills ) { %>
+
+              <div class="skill-container">
+                <div class="skill">
+                  <img src="/images/<%= skill.image.url %> " alt="<%= skill.name %> Logo">
+                  <h4 class="skill-name">
+                    <%= skill.name %>
+                  </h4>
+                  <div class="shadow top-left-shadow"></div>
+                  <div class="shadow bottom-right-shadow"></div>
+                </div>
+              </div>
+
+              <% } %>
+
+          </div>
+        </div>
+
+      </section>
+      <section>
+        <div id="projects" class="marker"></div>
+        <h2>Projects <span class="variation-color">.</span></h2>
+        <div class="projects-container section-content">
+
+          <% for( let project of projects ) { %>
+          
+            <div class="project-container">
+              <div class="project">
+                <img src="/images/<%= project.images[0].url %>" alt="<%= project.name %>  project">
+                <h3 class="project-title"><%= project.name %></h3>
+                <div class="project-description"><p><%= project.description %></p></div>
+                <div class="project-tags">
+  
+                  <% for( const techno of project.technos ) { %>
+                    <div class="tag"><img src="/images/<%= techno.image.url %> " alt=""><%= techno.name %> </div>
+                  <% } %>
+  
+                </div>
+                <div class="projects-buttons">                
+                  <a href="<%= project.link %>" target="_blank">
+                    <button class="btn1">View</button>
+                  </a>
+                  <a href="<%= project.github_repo_url %>" target="_blank">
+                    <button class="btn2"><ion-icon name="logo-github"></ion-icon></button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          <% } %>
+
+        </div>
+
+
+      </section>
+      <section>
+        <div id="contact" class="marker"></div>
+        <h2>Contact <span class="variation-color">.</span></h2>
+
+      </section>
+    </main>
+  </div>
+
+  <footer>
+
+  </footer>
+  <!-- Décoration -->
+  <div class="top-left-h white descktop-deco"></div>
+  <div class="top-left-v white descktop-deco"></div>
+  <div class="top-right-h white descktop-deco"></div>
+  <div class="top-right-v white descktop-deco"></div>
+  <div class="bottom-left-h white descktop-deco"></div>
+  <div class="bottom-left-v white descktop-deco"></div>
+  <div class="bottom-right-h white descktop-deco"></div>
+  <div class="bottom-right-v white descktop-deco"></div>
+  <div class="right-px-count px-count descktop-deco">
+    <div class="title">0px</div>
+    <div class="line"></div>
+    <div class="title">250px</div>
+    <div class="line"></div>
+    <div class="title">500px</div>
+    <div class="line"></div>
+    <div class="title">750px</div>
+    <div class="line"></div>
+    <div class="title">1000px</div>
+    <div class="line"></div>
+    <div class="title">1250px</div>
+    <div class="line"></div>
+    <div class="title">1500px</div>
+    <div class="line"></div>
+    <div class="title">1750px</div>
+    <div class="line"></div>
+    <div class="title">2000px</div>
+    <div class="line"></div>
+    <div class="title">2250px</div>
+  </div>
+  <div class="left-px-count px-count descktop-deco">
+    <div class="title">0px</div>
+    <div class="line"></div>
+    <div class="title">250px</div>
+    <div class="line"></div>
+    <div class="title">500px</div>
+    <div class="line"></div>
+    <div class="title">750px</div>
+    <div class="line"></div>
+    <div class="title">1000px</div>
+    <div class="line"></div>
+    <div class="title">1250px</div>
+    <div class="line"></div>
+    <div class="title">1500px</div>
+    <div class="line"></div>
+    <div class="title">1750px</div>
+    <div class="line"></div>
+    <div class="title">2000px</div>
+    <div class="line"></div>
+    <div class="title">2250px</div>
+  </div>
+  <div class="params">
+    <div class="params-container">
+      <ion-icon name="sunny"></ion-icon>
+      <div class="theme-switch">
+        <div class="switcher"></div>
+      </div>
+      <ion-icon name="moon"></ion-icon>
+    </div>
+    <div class="color-choice variation-color params-container">#<span class="color" id="color">35d50d</span>
+      <ion-icon name="shuffle" id="random-color"></ion-icon>
+    </div>
+  </div>
+
+  <script src="header.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

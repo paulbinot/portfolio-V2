@@ -74,6 +74,10 @@ img {
     max-width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 section {
     margin-bottom: 7rem;
     display: flex;
@@ -88,6 +92,47 @@ section {
     max-width: 1000px;
     margin: 0 auto;
     width: 100%;
+}
+
+button {
+    padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'RobotoMono', Helvetica, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 9px;
+    border: 2px solid;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    height: 100%;
+}
+
+button ion-icon {
+    font-size: 1.5rem;
+}
+
+.btn1 {
+    color: var(--background-color);
+    border-color: var(--variation-color);
+    background-color: var(--variation-color);
+}
+
+.btn1:hover {
+    background-color: var(--background-color);
+    color: var(--variation-color);
+}
+
+.btn2 {
+    color: var(--variation-color);
+    background-color: var(--background-color);
+    border-color: var(--variation-color);
+}
+
+.btn2:hover {
+    color: var(--background-color);
+    background-color: var(--variation-color);
 }
 
 @media screen and (max-width: 1024px) {
@@ -125,11 +170,12 @@ body::-webkit-scrollbar-thumb {
 /* HEADER */
 
 .header-container {
-background-color: rgba(255, 255, 255, 0.045);
+background-color: rgba(255, 255, 255, 0);
 backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
 position: fixed;
 width: 100%;
+z-index: 3;
 }
 
 header {
@@ -231,6 +277,8 @@ header {
 /* MAIN */
 main {
     padding-top: 6rem;
+    z-index: 2;
+    position: relative;
 }
 
 /* about me section */
@@ -521,10 +569,75 @@ main {
 }
 
 
+/* Projects section */
 
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.project-container {
+    flex: 1 0 50%;
+    max-width: 50%;
+    padding: 1.2rem;
+}
+
+.project {
+    padding: 1rem;
+    border-radius: 15px;
+    border: 2px solid var(--variation-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project img {
+    border-radius: 9px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.projects-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.project-tags .tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.2rem 0.3rem;
+    border-radius: 100px;
+    border: 1px solid var(--font-color);
+    font-size: 0.7rem;
+}
+
+.project-tags .tag img {
+    height: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+    }
+    .project-container {
+        flex: 1 0 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+}
 
 /* DESKTOP DECORATION */
+.descktop-deco {
+    z-index: 3;
+}
+
 .white {
     background-color: var(--font-color);
 }
@@ -629,6 +742,7 @@ main {
     display: flex;
     gap: 2rem;
     align-items: center;
+    z-index: 3;
 }
 
 .params .color-choice .color {
