@@ -34,20 +34,16 @@ themeSwitcher.addEventListener('click', () => {
   if (lightTheme === false) {
     document.documentElement.style.setProperty('--font-color', '#080908');
     document.documentElement.style.setProperty('--background-color', '#F2F6F0');
-    document.documentElement.style.setProperty('--variation-color', '#34c80f');
     lightTheme = true;
   } else if (lightTheme === true) {
     document.documentElement.style.setProperty('--font-color', '#F2F6F0');
     document.documentElement.style.setProperty('--background-color', '#080908');
-    document.documentElement.style.setProperty('--variation-color', '#44F917');
     lightTheme = false;
   }
 });
 
 const colorChoice = document.getElementById('color');
 let color = document.getElementById('color').textContent;
-console.log(color);
-
 
 colorChoice.addEventListener('DOMCharacterDataModified', () => {
   color = document.getElementById('color').textContent;
@@ -59,4 +55,5 @@ const randomColor = document.getElementById('random-color');
 randomColor.addEventListener('click', () => {
   color = Math.floor(Math.random()*16777215).toString(16);
   document.documentElement.style.setProperty('--variation-color', '#' + color);
+  colorChoice.innerHTML = color;
 });
