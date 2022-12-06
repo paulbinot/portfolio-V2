@@ -646,7 +646,7 @@ main {
     transition: all 0.2s ease-in-out;
 }
 
-.params .theme-switch-container {
+.params .params-container {
     display: flex;
     gap: 0.4rem;
     align-items: center;
@@ -665,6 +665,12 @@ main {
     height: 10px;
     width: 10px;
     border-radius: 99px;
+}
+
+.params #random-color {
+    color: var(--font-color);
+    cursor: pointer;
+    font-size: 0.85rem;
 }
 
 @media screen and (max-width: 768px) {
