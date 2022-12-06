@@ -1,7 +1,7 @@
 :root {
-    --font-color: #F2F6F0;
-    --background-color: #080908;
-    --variation-color: #44F917;
+    --font-color: #080908;
+    --background-color: #F2F6F0;
+    --variation-color: #35d50d;
 }
 
 body {
@@ -640,7 +640,7 @@ main {
     border-radius: 99px;
     width: 25px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding: 2px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
@@ -656,8 +656,8 @@ main {
     font-size: 0.72rem;
 }
 
-.params .light {
-    justify-content: flex-start;
+.params .dark {
+    justify-content: flex-end;
 }
 
 .params .theme-switch .switcher {

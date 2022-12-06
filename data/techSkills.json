@@ -1,13 +1,5 @@
 [
     {
-        "name": "HTML",
-        "image_url":"html-1.svg"
-    },
-    {
-        "name": "CSS",
-        "image_url":"css-3.svg"
-    },
-    {
         "name": "JavaScript",
         "image_url":"logo-javascript.svg"
     },

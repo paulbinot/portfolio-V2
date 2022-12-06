@@ -26,10 +26,10 @@ menuLinks.addEventListener('click', (event) => {
 });
 
 const themeSwitcher = document.querySelector('.theme-switch');
-let lightTheme = false;
+let lightTheme = true;
 
 themeSwitcher.addEventListener('click', () => {
-  themeSwitcher.classList.toggle("light");
+  themeSwitcher.classList.toggle("dark");
 
   if (lightTheme === false) {
     document.documentElement.style.setProperty('--font-color', '#080908');
@@ -42,6 +42,14 @@ themeSwitcher.addEventListener('click', () => {
     document.documentElement.style.setProperty('--variation-color', '#44F917');
     lightTheme = false;
   }
+});
 
-  console.log(lightTheme);
+const colorChoice = document.getElementById('color');
+let color = document.getElementById('color').textContent;
+console.log(color);
+
+
+colorChoice.addEventListener('DOMCharacterDataModified', () => {
+  color = document.getElementById('color').textContent;
+  document.documentElement.style.setProperty('--variation-color', '#' + color);
 });
