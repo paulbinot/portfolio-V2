@@ -144,6 +144,7 @@ button ion-icon {
 @media screen and (max-width: 768px) {
     h2 {
         font-size: 3.5rem;
+        padding-bottom: 1.5rem;
     }
     h3 {
         font-size: 1.5rem;
@@ -152,7 +153,10 @@ button ion-icon {
         padding: 0;
     }
     .page-container {
-        padding: 2rem;
+        padding: 1.2rem;
+    }
+    section {
+        margin-bottom: 4rem;
     }
 }
 
@@ -183,7 +187,7 @@ header {
     gap: 3.5rem;
     padding: 3rem 4rem 1rem 5rem;
     align-items: baseline;
-    border-bottom: 0.2px solid var(--background-color);
+    /* border-bottom: 0.2px solid var(--background-color); */
 }
 
 .descktop-nav ul {
@@ -197,6 +201,7 @@ header {
     header {
         flex-direction: column;
         gap: 1rem;
+        padding-left: 2rem;
     }
     .descktop-nav {
         display: none;
@@ -293,6 +298,7 @@ main {
     justify-content: space-between;
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0 0.7rem;
 }
 
 .about-me-content .infos, .photo {
@@ -643,6 +649,35 @@ main {
     .project img {
         height: 200px;
     }
+}
+
+/* Contact section */
+
+.contact-section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-section-content a {
+    color: var(--font-color);
+    transition: all 0.2s ease-in-out;
+}
+
+.contact-section-content a:hover {
+    color: var(--variation-color);
+}
+
+.contact-section-content .email a {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.contact-section-content .networks {
+    font-size: 4rem;
+    display: flex;
+    gap: 2rem;
 }
 
 /* DESKTOP DECORATION */
