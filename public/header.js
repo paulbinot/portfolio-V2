@@ -1,3 +1,27 @@
+const colorChoice = document.getElementById('color');
+let color = document.getElementById('color').textContent;
+
+function randomStart() {
+  color = Math.floor(Math.random()*16777215).toString(16);
+  document.documentElement.style.setProperty('--variation-color', '#' + color);
+  colorChoice.innerHTML = color;
+}
+
+randomStart();
+
+colorChoice.addEventListener('DOMCharacterDataModified', () => {
+  color = document.getElementById('color').textContent;
+  document.documentElement.style.setProperty('--variation-color', '#' + color);
+});
+
+const randomColor = document.getElementById('random-color');
+
+randomColor.addEventListener('click', () => {
+  color = Math.floor(Math.random()*16777215).toString(16);
+  document.documentElement.style.setProperty('--variation-color', '#' + color);
+  colorChoice.innerHTML = color;
+});
+
 const menuBtn = document.querySelector(".menu-button");
 const menu = document.querySelector(".descktop-nav");
 const menuLinks = document.querySelector("header");
@@ -40,28 +64,4 @@ themeSwitcher.addEventListener('click', () => {
     document.documentElement.style.setProperty('--background-color', '#080908');
     lightTheme = false;
   }
-});
-
-const colorChoice = document.getElementById('color');
-let color = document.getElementById('color').textContent;
-
-function randomStart() {
-  color = Math.floor(Math.random()*16777215).toString(16);
-  document.documentElement.style.setProperty('--variation-color', '#' + color);
-  colorChoice.innerHTML = color;
-}
-
-randomStart();
-
-colorChoice.addEventListener('DOMCharacterDataModified', () => {
-  color = document.getElementById('color').textContent;
-  document.documentElement.style.setProperty('--variation-color', '#' + color);
-});
-
-const randomColor = document.getElementById('random-color');
-
-randomColor.addEventListener('click', () => {
-  color = Math.floor(Math.random()*16777215).toString(16);
-  document.documentElement.style.setProperty('--variation-color', '#' + color);
-  colorChoice.innerHTML = color;
 });
