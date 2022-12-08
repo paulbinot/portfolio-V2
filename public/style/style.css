@@ -376,6 +376,8 @@ main {
     color: #a9aca7;
     font-weight: 300;
     font-size: 0.9rem;
+    text-align: center;
+    align-items: center;
 }
 
 .schooling-content .right .content .details {
