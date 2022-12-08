@@ -26,7 +26,6 @@ const mainController = {
           ["created_at", "DESC"]
         ]
       });
-      console.log(projects);
       res.render("index", { techSkills, otherSkills, projects });
     } catch (error) {
       console.error(error.message);
