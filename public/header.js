@@ -3,6 +3,10 @@ let color = document.getElementById('color').textContent;
 
 function randomStart() {
   color = Math.floor(Math.random()*16777215).toString(16);
+  while (color.length < 6) {
+    color = Math.floor(Math.random()*16777215).toString(16);
+  }
+
   document.documentElement.style.setProperty('--variation-color', '#' + color);
   colorChoice.innerHTML = color;
 }
@@ -18,6 +22,9 @@ const randomColor = document.getElementById('random-color');
 
 randomColor.addEventListener('click', () => {
   color = Math.floor(Math.random()*16777215).toString(16);
+  while (color.length < 6) {
+    color = Math.floor(Math.random()*16777215).toString(16);
+  }
   document.documentElement.style.setProperty('--variation-color', '#' + color);
   colorChoice.innerHTML = color;
 });
