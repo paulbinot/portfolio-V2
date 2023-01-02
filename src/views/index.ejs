@@ -173,7 +173,7 @@
         <div id="skills" class="marker"></div>
         <h2>Skills <span class="variation-color">.</span></h2>
         <div class="section-content">
-          <h3><span class="variation-color">></span> Web development technos</h3>
+          <h3><span class="variation-color">></span> Web development languages</h3>
           <div class="skills-container">
 
             <% for( const skill of techSkills ) { %>
@@ -183,6 +183,26 @@
                   <img src="/images/<%= skill.image.url %> " alt="<%= skill.name %> Logo">
                   <h4 class="skill-name">
                     <%= skill.name %>
+                  </h4>
+                  <div class="shadow top-left-shadow"></div>
+                  <div class="shadow bottom-right-shadow"></div>
+                </div>
+              </div>
+
+              <% } %>
+
+          </div>
+
+          <h3><span class="variation-color">></span> Web development technos</h3>
+          <div class="skills-container">
+
+            <% for( const techno of technos ) { %>
+
+              <div class="skill-container">
+                <div class="skill">
+                  <img src="/images/<%= techno.image.url %> " alt="<%= techno.name %> Logo">
+                  <h4 class="skill-name">
+                    <%= techno.name %>
                   </h4>
                   <div class="shadow top-left-shadow"></div>
                   <div class="shadow bottom-right-shadow"></div>
@@ -234,13 +254,39 @@
                   <% } %>
   
                 </div>
-                <div class="projects-buttons">                
-                  <a href="<%= project.link %>" target="_blank" class="highlight-link">
-                    <button class="btn1">View</button>
-                  </a>
-                  <a href="<%= project.github_repo_url %>" target="_blank">
-                    <button class="btn2"><ion-icon name="logo-github"></ion-icon></button>
-                  </a>
+                <div class="projects-buttons">
+                  
+                  <% if (project.link === "/") { %>
+                   
+                    <button onclick="lol()" class="btn1" style="cursor: not-allowed;">View</button>
+                    <script>
+                      function lol() {
+                        alert("Bro...");
+                      }
+                      </script>
+
+                  <% } else { %>
+
+                    <a href="<%= project.link %>" target="_blank" class="highlight-link">
+                      <button class="btn1">View</button>
+                    </a>
+
+                  <% } %>
+
+                  <% if (project.github_repo_url === "/") { %>
+                   
+                    <!-- <a href="#" style="cursor: not-allowed;"> -->
+                      <button class="btn2" style="cursor: not-allowed;"><ion-icon name="logo-github" ></ion-icon></button>
+                    <!-- </a> -->
+
+                  <% } else {%>
+
+                    <a href="<%= project.github_repo_url %>" target="_blank">
+                      <button class="btn2"><ion-icon name="logo-github"></ion-icon></button>
+                    </a>
+
+                  <% } %> 
+
                 </div>
               </div>
             </div>
@@ -322,6 +368,10 @@
     <div class="line"></div>
     <div class="title">4750px</div>
     <div class="line"></div>
+    <div class="title">5000px</div>
+    <div class="line"></div>
+    <div class="title">5250px</div>
+    <div class="line"></div>
   </div>
   <div class="left-px-count px-count descktop-deco">
     <div class="title">0px</div>
@@ -363,6 +413,10 @@
     <div class="title">4500px</div>
     <div class="line"></div>
     <div class="title">4750px</div>
+    <div class="line"></div>
+    <div class="title">5000px</div>
+    <div class="line"></div>
+    <div class="title">5250px</div>
     <div class="line"></div>
   </div>
   <div class="params">
