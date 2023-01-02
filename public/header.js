@@ -71,4 +71,4 @@ themeSwitcher.addEventListener('click', () => {
     document.documentElement.style.setProperty('--background-color', '#080908');
     lightTheme = false;
   }
-}); 
+});
