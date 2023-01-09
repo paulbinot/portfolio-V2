@@ -244,49 +244,57 @@
           
             <div class="project-container">
               <div class="project">
-                <img src="/images/<%= project.images[0].url %>" alt="<%= project.name %>  project">
-                <h3 class="project-title"><%= project.name %></h3>
-                <div class="project-description"><p><%= project.description %></p></div>
-                <div class="project-tags">
-  
-                  <% for( const techno of project.technos ) { %>
-                    <div class="tag"><img src="/images/<%= techno.image.url %> " alt=""><%= techno.name %> </div>
-                  <% } %>
-  
+                <div class="top">
+                  <img src="/images/<%= project.images[0].url %>" alt="<%= project.name %>  project">
+                  <h3 class="project-title"><%= project.name %></h3>
+                  <div class="project-description"><p><%= project.description %></p></div>
                 </div>
-                <div class="projects-buttons">
-                  
-                  <% if (project.link === "/") { %>
-                   
-                    <button onclick="lol()" class="btn1" style="cursor: not-allowed;">View</button>
-                    <script>
-                      function lol() {
-                        alert("Bro...");
-                      }
-                      </script>
-
-                  <% } else { %>
-
-                    <a href="<%= project.link %>" target="_blank" class="highlight-link">
-                      <button class="btn1">View</button>
-                    </a>
-
-                  <% } %>
-
-                  <% if (project.github_repo_url === "/") { %>
-                   
-                    <!-- <a href="#" style="cursor: not-allowed;"> -->
-                      <button class="btn2" style="cursor: not-allowed;"><ion-icon name="logo-github" ></ion-icon></button>
-                    <!-- </a> -->
-
-                  <% } else {%>
-
-                    <a href="<%= project.github_repo_url %>" target="_blank">
-                      <button class="btn2"><ion-icon name="logo-github"></ion-icon></button>
-                    </a>
-
-                  <% } %> 
-
+                <div class="bottom">
+                  <div class="project-tags">
+    
+                    <% for( const techno of project.technos ) { %>
+                      <div class="tag"><img src="/images/<%= techno.image.url %> " alt=""><%= techno.name %> </div>
+                    <% } %>
+    
+                  </div>
+                  <div class="projects-buttons">
+                    
+                    <% if (project.link === "/") { %>
+                     
+                      <button class="btn1" style="cursor: not-allowed;">Offline</button>
+  
+                    <% } else if (project.link === "here") { %> 
+  
+                      <button onclick="lol()" class="btn1" style="cursor: not-allowed;">Your are here 📍</button>
+                      <script>
+                        function lol() {
+                          alert("Bro...");
+                        }
+                        </script>
+  
+                    <% } else { %>
+  
+                      <a href="<%= project.link %>" target="_blank" class="highlight-link">
+                        <button class="btn1">View</button>
+                      </a>
+  
+                    <% } %>
+  
+                    <% if (project.github_repo_url === "/") { %>
+                     
+                      <!-- <a href="#" style="cursor: not-allowed;"> -->
+                        <button class="btn2" style="cursor: not-allowed;"><ion-icon name="logo-github" ></ion-icon></button>
+                      <!-- </a> -->
+  
+                    <% } else {%>
+  
+                      <a href="<%= project.github_repo_url %>" target="_blank">
+                        <button class="btn2"><ion-icon name="logo-github"></ion-icon></button>
+                      </a>
+  
+                    <% } %> 
+  
+                  </div>
                 </div>
               </div>
             </div>

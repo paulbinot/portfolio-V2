@@ -1,8 +1,9 @@
 :root {
-    --font-color: #080908;
+    --font-color: #1d1f1d;
     --background-color: #F2F6F0;
-    --variation-color: #35d50d;
+    --variation-color: #e1d770;
 }
+/* 2ded93 */
 
 body {
     background-color: var(--background-color);
@@ -164,11 +165,12 @@ button ion-icon {
 
 body::-webkit-scrollbar {
     background-color: var(--background-color);
-    width: 6px;
+    width: 7px;
 }
 
 body::-webkit-scrollbar-thumb {
     background: var(--variation-color);
+    border-radius: 10px;
 }
 
 /* HEADER */
@@ -599,13 +601,22 @@ main {
     border: 1px solid var(--variation-color);
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.7rem;
+    height: 100%;
+    justify-content: space-between;
 }
 
-.project img {
+.project .top, .project .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+}
+
+.project .top img {
     border-radius: 9px;
     height: 250px;
     object-fit: cover;
+    width: 100%;
 }
 
 .projects-buttons {
@@ -625,7 +636,7 @@ main {
 .project-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
+    gap: 0.5rem;
 }
 
 .project-tags .tag {
@@ -634,8 +645,21 @@ main {
     gap: 0.5rem;
     padding: 0.2rem 0.4rem 0.2rem 0.2rem;
     border-radius: 100px;
-    border: 1px solid var(--font-color);
+    /* color: #0d0f0d5f; */
     font-size: 0.7rem;
+    position: relative;
+}
+
+.project-tags .tag::before {
+    content: '';
+    border-radius: 100px;
+    background: var(--font-color);
+    opacity: 0.1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .project-tags .tag img {

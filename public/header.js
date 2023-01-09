@@ -1,17 +1,17 @@
 const colorChoice = document.getElementById('color');
 let color = document.getElementById('color').textContent;
 
-function randomStart() {
-  color = Math.floor(Math.random()*16777215).toString(16);
-  while (color.length < 6) {
-    color = Math.floor(Math.random()*16777215).toString(16);
-  }
+// function randomStart() {
+//   color = Math.floor(Math.random()*16777215).toString(16);
+//   while (color.length < 6) {
+//     color = Math.floor(Math.random()*16777215).toString(16);
+//   }
 
-  document.documentElement.style.setProperty('--variation-color', '#' + color);
-  colorChoice.innerHTML = color;
-}
+//   document.documentElement.style.setProperty('--variation-color', '#' + color);
+//   colorChoice.innerHTML = color;
+// }
 
-randomStart();
+// randomStart();
 
 colorChoice.addEventListener('DOMCharacterDataModified', () => {
   color = document.getElementById('color').textContent;
@@ -63,12 +63,12 @@ themeSwitcher.addEventListener('click', () => {
   themeSwitcher.classList.toggle("dark");
 
   if (lightTheme === false) {
-    document.documentElement.style.setProperty('--font-color', '#080908');
+    document.documentElement.style.setProperty('--font-color', '#1d1f1d');
     document.documentElement.style.setProperty('--background-color', '#F2F6F0');
     lightTheme = true;
   } else if (lightTheme === true) {
     document.documentElement.style.setProperty('--font-color', '#F2F6F0');
-    document.documentElement.style.setProperty('--background-color', '#080908');
+    document.documentElement.style.setProperty('--background-color', '#1d1f1d');
     lightTheme = false;
   }
 });

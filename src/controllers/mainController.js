@@ -19,7 +19,10 @@ const mainController = {
           },
           {
             association: "technos",
-            include: "image"
+            include: "image",
+            order: [
+              ["id", "ASC"]
+            ]
           }
         ],
         order: [
