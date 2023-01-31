@@ -21,7 +21,7 @@ const mainController = {
             association: "technos",
             include: "image",
             order: [
-              ["id", "ASC"]
+              ["name", "ASC"]
             ]
           }
         ],
