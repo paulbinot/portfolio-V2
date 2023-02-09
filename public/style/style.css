@@ -1,7 +1,7 @@
 :root {
     --font-color: #1d1f1d;
     --background-color: #F2F6F0;
-    --variation-color: #e1d770;
+    --variation-color: #5cb856;
 }
 /* 2ded93 */
 
@@ -768,6 +768,10 @@ form#contact-form input, form#contact-form textarea {
 
     .contact-form-info input {
         width: 100%;
+    }
+
+    form#contact-form input, form#contact-form textarea {
+        font-size: 1rem;
     }
 }
 
