@@ -729,7 +729,7 @@ form#contact-form input, form#contact-form textarea {
     border: 2px solid var(--font-color);
     border-radius: 10px;
     font-family: 'RobotoMono', Helvetica, sans-serif;
-    
+    color: var(--font-color);
 }
 
 .contact-form-btn-container {
