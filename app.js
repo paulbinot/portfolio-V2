@@ -52,7 +52,7 @@ app.use(mainRouter);
 // 404
 app.use((req, res) => {
   res.statusCode = 404;
-  res.send("404page");
+  res.redirect('/');
 });
 
 app.listen(PORT);
