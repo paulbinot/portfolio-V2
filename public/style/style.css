@@ -674,6 +674,7 @@ main {
         flex: 1 0 100%;
         width: 100%;
         max-width: 100%;
+        padding: 1rem 0.5rem;
     }
     .project img {
         height: 200px;
@@ -686,6 +687,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    padding: 0 0.5rem;
 }
 
 .contact-section-content a {
@@ -707,6 +709,66 @@ main {
     font-size: 4rem;
     display: flex;
     gap: 2rem;
+}
+
+form#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-form-infos {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+form#contact-form input, form#contact-form textarea {
+    padding: 0.5rem;
+    background-color: var(--background-color);
+    border: 2px solid var(--font-color);
+    border-radius: 10px;
+    font-family: 'RobotoMono', Helvetica, sans-serif;
+    
+}
+
+.contact-form-btn-container {
+    display: flex;
+    justify-content: end;
+}
+.contact-form-btn-container button {
+    padding: 0.4rem 1.5rem;
+}
+
+.contact-form-info {
+    position: relative;
+}
+
+.contact-form-message {
+    position: relative;
+}
+
+.contact-form-message textarea {  
+    width: 100%;
+}
+
+.contact-form-info label, .contact-form-message label {
+    position: absolute;
+    top: -6px;
+    left: 15px;
+    font-size: 0.7rem;
+    background-color: var(--background-color);
+    padding: 0 0.2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-form-infos {
+        flex-direction: column;
+    }
+
+    .contact-form-info input {
+        width: 100%;
+    }
 }
 
 /* DESKTOP DECORATION */
