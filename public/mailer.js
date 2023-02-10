@@ -14,23 +14,6 @@ contactForm.addEventListener('submit', (event) => {
     message: message.value
   };
 
-  // const xhr = new XMLHttpRequest();
-  // xhr.open('POST', '/');
-  // xhr.setRequestHeader('content-type', 'application/json');
-  // xhr.onload = function() {
-  //   if (xhr.responseText === 'success') {
-  //     alert("email send");
-  //     name.value = "";
-  //     email.value = "";
-  //     subject.value = "";
-  //     message.value = "";
-  //   } else {
-  //     alert("Something went wrong");
-  //   }
-  // };
-
-  // xhr.send(JSON.stringify(formData));
-
   fetch('/', {
     method: 'POST',
     headers: {
@@ -41,7 +24,7 @@ contactForm.addEventListener('submit', (event) => {
     .then(response => response.text())
     .then(data => {
       if (data === 'success') {
-        alert("email send");
+        alert("email sent");
         name.value = "";
         email.value = "";
         subject.value = "";
