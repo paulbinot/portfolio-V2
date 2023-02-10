@@ -14,20 +14,40 @@ contactForm.addEventListener('submit', (event) => {
     message: message.value
   };
 
-  const xhr = new XMLHttpRequest();
-  xhr.open('POST', '/');
-  xhr.setRequestHeader('content-type', 'application/json');
-  xhr.onload = function() {
-    if (xhr.responseText === 'success') {
-      alert("email send");
-      name.value = "";
-      email.value = "";
-      subject.value = "";
-      message.value = "";
-    } else {
-      alert("Something went wrong");
-    }
-  };
+  // const xhr = new XMLHttpRequest();
+  // xhr.open('POST', '/');
+  // xhr.setRequestHeader('content-type', 'application/json');
+  // xhr.onload = function() {
+  //   if (xhr.responseText === 'success') {
+  //     alert("email send");
+  //     name.value = "";
+  //     email.value = "";
+  //     subject.value = "";
+  //     message.value = "";
+  //   } else {
+  //     alert("Something went wrong");
+  //   }
+  // };
 
-  xhr.send(JSON.stringify(formData));
+  // xhr.send(JSON.stringify(formData));
+
+  fetch('/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+    .then(response => response.text())
+    .then(data => {
+      if (data === 'success') {
+        alert("email send");
+        name.value = "";
+        email.value = "";
+        subject.value = "";
+        message.value = "";
+      } else {
+        alert("Something went wrong");
+      }
+    });
 });
