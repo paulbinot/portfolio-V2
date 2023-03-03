@@ -63,12 +63,12 @@ themeSwitcher.addEventListener('click', () => {
   themeSwitcher.classList.toggle("dark");
 
   if (lightTheme === false) {
-    document.documentElement.style.setProperty('--font-color', '#1d1f1d');
-    document.documentElement.style.setProperty('--background-color', '#F2F6F0');
+    document.documentElement.style.setProperty('--font-color', '#000000');
+    document.documentElement.style.setProperty('--background-color', '#f0f5f6');
     lightTheme = true;
   } else if (lightTheme === true) {
-    document.documentElement.style.setProperty('--font-color', '#F2F6F0');
-    document.documentElement.style.setProperty('--background-color', '#1d1f1d');
+    document.documentElement.style.setProperty('--font-color', '#f0f5f6');
+    document.documentElement.style.setProperty('--background-color', '#000000');
     lightTheme = false;
   }
 });
